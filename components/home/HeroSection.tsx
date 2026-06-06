@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import SectionTag from '@/components/shared/SectionTag'
 
 export default function HeroSection() {
@@ -91,98 +92,89 @@ export default function HeroSection() {
         </div>
       </div>
 
-      {/* Right: Visual card */}
+      {/* Right: Visual composition */}
       <div
         style={{
           position: 'relative',
-          backgroundColor: '#1A1A1A',
-          minHeight: '480px',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          overflow: 'hidden',
+          minHeight: '520px',
+          display: 'grid',
+          gridTemplateColumns: '1fr 1fr',
+          gridTemplateRows: '1fr 1fr',
+          gap: '4px',
         }}
       >
-        {/* Ghost letters */}
-        <div
-          style={{
-            position: 'absolute',
-            fontFamily: 'var(--font-bebas), sans-serif',
-            fontSize: 'clamp(120px, 18vw, 220px)',
-            color: '#1f1f1f',
-            userSelect: 'none',
-            lineHeight: 1,
-            letterSpacing: '0.05em',
-            bottom: '-20px',
-            right: '-10px',
-          }}
-        >
-          RG
+        {/* Main large image */}
+        <div style={{ position: 'relative', gridColumn: '1', gridRow: '1 / 3', overflow: 'hidden', backgroundColor: '#1A1A1A' }}>
+          <Image
+            src="https://picsum.photos/seed/rg1/600/800"
+            alt="Red_grafic portfolio"
+            fill
+            priority
+            sizes="30vw"
+            style={{ objectFit: 'cover', filter: 'grayscale(20%) brightness(0.7)' }}
+          />
+          <div style={{
+            position: 'absolute', inset: 0,
+            background: 'linear-gradient(135deg, rgba(212,43,43,0.15) 0%, transparent 60%)',
+          }} />
+          <div style={{
+            position: 'absolute', bottom: '16px', left: '16px',
+            fontFamily: 'var(--font-bebas)', fontSize: '20px',
+            letterSpacing: '0.1em', color: '#F5F5F0',
+            backgroundColor: 'rgba(10,10,10,0.7)', padding: '6px 12px',
+          }}>
+            Brand Identity
+          </div>
+          <div style={{ position: 'absolute', left: 0, top: 0, bottom: 0, width: '3px', backgroundColor: '#D42B2B' }} />
         </div>
 
-        {/* Portfolio preview cards */}
-        <div style={{ position: 'relative', zIndex: 2, padding: '40px', width: '100%' }}>
-          {[
-            { top: '0', left: '0', label: 'Brand Identity', w: '70%' },
-            { top: '80px', left: '30%', label: 'Illustrazione', w: '65%' },
-            { top: '160px', left: '10%', label: 'Character Design', w: '60%' },
-          ].map((card, i) => (
-            <div
-              key={i}
-              style={{
-                position: 'relative',
-                backgroundColor: '#111111',
-                border: '1px solid #2A2A2A',
-                padding: '20px 24px',
-                marginBottom: '12px',
-                display: 'flex',
-                alignItems: 'center',
-                gap: '16px',
-              }}
-            >
-              <div
-                style={{
-                  width: '40px',
-                  height: '40px',
-                  backgroundColor: '#2A2A2A',
-                  flexShrink: 0,
-                }}
-              />
-              <div>
-                <div
-                  style={{
-                    fontFamily: 'var(--font-bebas), sans-serif',
-                    fontSize: '16px',
-                    letterSpacing: '0.1em',
-                    color: '#F5F5F0',
-                  }}
-                >
-                  {card.label}
-                </div>
-                <div
-                  style={{
-                    fontFamily: 'var(--font-dm-sans), sans-serif',
-                    fontSize: '11px',
-                    color: '#888888',
-                    letterSpacing: '1px',
-                    textTransform: 'uppercase',
-                  }}
-                >
-                  Red_grafic
-                </div>
-              </div>
-              <div
-                style={{
-                  position: 'absolute',
-                  left: 0,
-                  top: 0,
-                  bottom: 0,
-                  width: '2px',
-                  backgroundColor: '#D42B2B',
-                }}
-              />
-            </div>
-          ))}
+        {/* Top-right image */}
+        <div style={{ position: 'relative', overflow: 'hidden', backgroundColor: '#1A1A1A' }}>
+          <Image
+            src="https://picsum.photos/seed/rg2/400/400"
+            alt="Illustrazione"
+            fill
+            sizes="15vw"
+            style={{ objectFit: 'cover', filter: 'grayscale(30%) brightness(0.65)' }}
+          />
+          <div style={{
+            position: 'absolute', inset: 0,
+            background: 'linear-gradient(to top, rgba(10,10,10,0.8) 0%, transparent 50%)',
+          }} />
+          <div style={{
+            position: 'absolute', bottom: '12px', left: '12px',
+            fontFamily: 'var(--font-bebas)', fontSize: '14px',
+            letterSpacing: '0.1em', color: '#F5F5F0',
+          }}>
+            Illustrazione
+          </div>
+        </div>
+
+        {/* Bottom-right image */}
+        <div style={{ position: 'relative', overflow: 'hidden', backgroundColor: '#1A1A1A' }}>
+          <Image
+            src="https://picsum.photos/seed/rg3/400/400"
+            alt="Character Design"
+            fill
+            sizes="15vw"
+            style={{ objectFit: 'cover', filter: 'grayscale(30%) brightness(0.65)' }}
+          />
+          <div style={{
+            position: 'absolute', inset: 0,
+            background: 'linear-gradient(to top, rgba(10,10,10,0.8) 0%, transparent 50%)',
+          }} />
+          <div style={{
+            position: 'absolute', bottom: '12px', left: '12px',
+            fontFamily: 'var(--font-bebas)', fontSize: '14px',
+            letterSpacing: '0.1em', color: '#F5F5F0',
+          }}>
+            Character Design
+          </div>
+          {/* Red accent corner */}
+          <div style={{
+            position: 'absolute', bottom: 0, right: 0,
+            width: '40px', height: '40px', backgroundColor: '#D42B2B',
+          }} />
         </div>
       </div>
 

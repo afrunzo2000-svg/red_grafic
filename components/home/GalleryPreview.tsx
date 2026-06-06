@@ -81,10 +81,11 @@ export default async function GalleryPreview() {
             item={displayItems[0] ?? { _id: 'p0', title: 'Portfolio', category: 'Loghi' }}
             style={{ gridRow: '1 / 3', minHeight: '480px' }}
             large
+            seedIndex={0}
           />
           {/* 4 smaller cells */}
-          {displayItems.slice(1, 5).map((item) => (
-            <MosaicCell key={item._id} item={item} style={{ minHeight: '236px' }} />
+          {displayItems.slice(1, 5).map((item, i) => (
+            <MosaicCell key={item._id} item={item} style={{ minHeight: '236px' }} seedIndex={i + 1} />
           ))}
         </div>
       </div>
