@@ -100,11 +100,7 @@ export default function AboutTeaser() {
               marginBottom: '24px',
             }}
           >
-            ARTURO /
-            <br />
-            ALESSIO /
-            <br />
-            FRUNZO
+            ARTURO
           </h2>
           <p
             style={{

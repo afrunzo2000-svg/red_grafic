@@ -93,7 +93,7 @@ export default function Footer() {
         }}
       >
         <p style={{ fontFamily: 'var(--font-dm-sans)', fontSize: '11px', color: '#444444', margin: 0 }}>
-          © {new Date().getFullYear()} Red_grafic · Arturo Alessio Frunzo · Capaccio Paestum (SA)
+          © {new Date().getFullYear()} Red_grafic · Arturo · Capaccio Paestum (SA)
         </p>
         <div style={{ display: 'flex', gap: '20px' }}>
           {[{ href: '/privacy', label: 'Privacy' }, { href: '/cookie-policy', label: 'Cookie Policy' }].map((l) => (

@@ -80,6 +80,7 @@ export default function ServicesPreview() {
               display: 'flex',
               flexDirection: 'column',
               justifyContent: 'center',
+              minHeight: '200px',
             }}
           >
             <h3
@@ -160,6 +161,10 @@ function ServiceCard({ num, title, desc }: { num: string; title: string; desc: s
         cursor: 'default',
         transition: 'background-color 0.2s',
         overflow: 'hidden',
+        minHeight: '200px',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'flex-start',
       }}
       onMouseEnter={(e) => {
         const el = e.currentTarget
@@ -174,17 +179,17 @@ function ServiceCard({ num, title, desc }: { num: string; title: string; desc: s
         if (bar) bar.style.opacity = '0'
       }}
     >
-      {/* Ghost number */}
+      {/* Ghost number — clipped inside card */}
       <div
         style={{
           position: 'absolute',
           fontFamily: 'var(--font-bebas), sans-serif',
-          fontSize: '120px',
+          fontSize: '100px',
           color: '#1A1A1A',
           userSelect: 'none',
           lineHeight: 1,
-          right: '-10px',
-          bottom: '-10px',
+          right: '16px',
+          bottom: '8px',
         }}
       >
         {num}

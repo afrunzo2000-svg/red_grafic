@@ -125,11 +125,7 @@ export default function InfoPage() {
               marginBottom: '32px',
             }}
           >
-            ARTURO /
-            <br />
-            ALESSIO /
-            <br />
-            FRUNZO
+            ARTURO
           </h1>
           <p
             style={{
@@ -393,7 +389,7 @@ export default function InfoPage() {
                   fontFamily: 'var(--font-bebas), sans-serif',
                   fontSize: '120px',
                   color: '#1A1A1A',
-                  bottom: '-20px',
+                  bottom: '8px',
                   right: '10px',
                   lineHeight: 1,
                   userSelect: 'none',
