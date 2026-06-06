@@ -178,15 +178,16 @@ export default function HeroSection() {
         </div>
       </div>
 
-      {/* Full-width red line */}
-      <div
-        style={{
-          gridColumn: '1 / -1',
-          height: '3px',
-          backgroundColor: '#D42B2B',
-          width: '100%',
-        }}
-      />
+      {/* Scroll indicator + red line */}
+      <div style={{ gridColumn: '1 / -1', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '16px', paddingBottom: '16px' }}>
+        <div style={{ textAlign: 'center' }}>
+          <span style={{ fontFamily: 'var(--font-dm-sans)', fontSize: '10px', fontWeight: 500, letterSpacing: '2.5px', textTransform: 'uppercase', color: '#444444', display: 'block', marginBottom: '10px' }}>
+            Scorri
+          </span>
+          <div className="scroll-line" />
+        </div>
+      </div>
+      <div style={{ gridColumn: '1 / -1', height: '3px', backgroundColor: '#D42B2B', width: '100%' }} />
     </section>
   )
 }

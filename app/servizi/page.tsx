@@ -249,6 +249,16 @@ export default async function ServiziPage() {
                   >
                     {s.timeframe}
                   </div>
+                  <div
+                    style={{
+                      fontFamily: 'var(--font-dm-sans)',
+                      fontSize: '11px',
+                      color: '#444444',
+                      marginTop: '4px',
+                    }}
+                  >
+                    dall&apos;approvazione del progetto
+                  </div>
                 </div>
 
                 <Link

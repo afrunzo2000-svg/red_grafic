@@ -51,26 +51,25 @@ export default function Navbar() {
         }}
       >
         {/* Logo */}
-        <Link href="/" style={{ textDecoration: 'none' }}>
+        <Link href="/" style={{ textDecoration: 'none', display: 'inline-block' }}>
           <span
             style={{
               fontFamily: 'var(--font-bebas), sans-serif',
-              fontSize: '28px',
-              letterSpacing: '0.1em',
+              fontSize: '26px',
+              letterSpacing: '0.15em',
               color: '#F5F5F0',
               lineHeight: 1,
+              display: 'block',
             }}
           >
-            RED
-            <span style={{ color: '#D42B2B' }}>_</span>
-            GRAFIC
+            RED<span style={{ color: '#D42B2B' }}>_</span>GRAFIC
           </span>
           <div
             style={{
               height: '2px',
               backgroundColor: '#D42B2B',
               width: '100%',
-              marginTop: '2px',
+              marginTop: '3px',
             }}
           />
         </Link>

@@ -8,6 +8,11 @@ const nextConfig: NextConfig = {
       { hostname: 'fastly.picsum.photos' },
     ],
   },
+  async redirects() {
+    return [
+      { source: '/home', destination: '/', permanent: true },
+    ]
+  },
   async headers() {
     return [
       {

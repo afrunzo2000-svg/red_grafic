@@ -192,22 +192,26 @@ export default function BookingWizard() {
                   backgroundColor: form.tipoProgetto === pt.label ? '#D42B2B' : '#1A1A1A',
                   border: '1px solid',
                   borderColor: form.tipoProgetto === pt.label ? '#D42B2B' : '#2A2A2A',
-                  padding: '24px 20px',
+                  padding: '36px 28px',
                   cursor: 'pointer',
                   textAlign: 'left',
                   transition: 'all 0.2s',
                   position: 'relative',
                   overflow: 'hidden',
+                  minHeight: '120px',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  justifyContent: 'flex-end',
                 }}
               >
                 <div
                   style={{
                     position: 'absolute',
                     fontFamily: 'var(--font-bebas), sans-serif',
-                    fontSize: '64px',
+                    fontSize: '80px',
                     color: form.tipoProgetto === pt.label ? 'rgba(255,255,255,0.1)' : '#111111',
-                    bottom: '-10px',
-                    right: '8px',
+                    bottom: '4px',
+                    right: '12px',
                     lineHeight: 1,
                   }}
                 >
@@ -216,7 +220,7 @@ export default function BookingWizard() {
                 <div
                   style={{
                     fontFamily: 'var(--font-bebas), sans-serif',
-                    fontSize: '18px',
+                    fontSize: '22px',
                     letterSpacing: '0.05em',
                     color: '#F5F5F0',
                     lineHeight: 1,
