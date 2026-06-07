@@ -26,7 +26,7 @@ export default function HowItWorks() {
     <section style={{ backgroundColor: '#0A0A0A', borderBottom: '1px solid #1f1f1f', padding: '100px 0' }}>
       <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 24px' }}>
         {/* Header */}
-        <div style={{ marginBottom: '64px', display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', flexWrap: 'wrap', gap: '16px' }}>
+        <div style={{ marginBottom: '40px', display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', flexWrap: 'wrap', gap: '16px' }}>
           <div>
             <span style={{ fontFamily: 'var(--font-dm-sans)', fontSize: '11px', fontWeight: 500, letterSpacing: '2px', textTransform: 'uppercase', color: '#D42B2B', display: 'block', marginBottom: '12px' }}>
               — Come funziona

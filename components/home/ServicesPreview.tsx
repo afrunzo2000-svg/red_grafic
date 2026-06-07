@@ -225,11 +225,12 @@ function ServiceCard({ num, title, desc }: { num: string; title: string; desc: s
         <h3
           style={{
             fontFamily: 'var(--font-bebas), sans-serif',
-            fontSize: '24px',
+            fontSize: 'clamp(18px, 2.5vw, 24px)',
             letterSpacing: '0.05em',
             color: '#F5F5F0',
             marginBottom: '12px',
-            lineHeight: 1,
+            lineHeight: 1.1,
+            wordBreak: 'break-word',
           }}
         >
           {title}

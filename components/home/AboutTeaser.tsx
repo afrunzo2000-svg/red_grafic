@@ -21,19 +21,20 @@ export default function AboutTeaser() {
         <div
           style={{
             backgroundColor: '#1A1A1A',
-            minHeight: '400px',
+            minHeight: '240px',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
             position: 'relative',
             overflow: 'hidden',
           }}
+          className="md:min-h-[360px]"
         >
           <div
             style={{
               position: 'absolute',
               fontFamily: 'var(--font-bebas), sans-serif',
-              fontSize: '200px',
+              fontSize: 'clamp(100px, 20vw, 180px)',
               color: '#111111',
               userSelect: 'none',
               lineHeight: 1,
@@ -71,7 +72,7 @@ export default function AboutTeaser() {
         {/* Text */}
         <div
           style={{
-            padding: '80px 48px',
+            padding: '48px 32px',
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'center',
@@ -119,13 +120,16 @@ export default function AboutTeaser() {
             href="/info"
             style={{
               fontFamily: 'var(--font-dm-sans), sans-serif',
-              fontSize: '13px',
-              fontWeight: 500,
+              fontSize: '12px',
+              fontWeight: 700,
               letterSpacing: '1.5px',
               textTransform: 'uppercase',
               color: '#D42B2B',
               textDecoration: 'none',
               alignSelf: 'flex-start',
+              border: '1px solid #D42B2B',
+              padding: '12px 24px',
+              display: 'inline-block',
             }}
           >
             Scopri di più →

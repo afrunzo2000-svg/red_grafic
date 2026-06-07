@@ -77,7 +77,7 @@ export default function Navbar() {
         {/* Desktop links */}
         <div
           style={{ display: 'flex', alignItems: 'center', gap: '40px' }}
-          className="hidden md:flex"
+          className="hidden lg:flex"
         >
           {links.map((l) => (
             <Link
@@ -126,7 +126,7 @@ export default function Navbar() {
 
         {/* Mobile hamburger */}
         <button
-          className="flex md:hidden"
+          className="flex lg:hidden"
           onClick={() => setOpen(!open)}
           style={{ color: '#F5F5F0', background: 'none', border: 'none', cursor: 'pointer' }}
           aria-label="Menu"
@@ -143,7 +143,7 @@ export default function Navbar() {
             borderTop: '1px solid #1f1f1f',
             padding: '24px',
           }}
-          className="flex md:hidden flex-col gap-6"
+          className="flex lg:hidden flex-col gap-6"
         >
           {links.map((l) => (
             <Link

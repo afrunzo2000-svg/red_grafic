@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect } from 'react'
+import 'vanilla-cookieconsent/dist/cookieconsent.css'
 
 
 export default function CookieBanner() {
@@ -110,6 +111,16 @@ export default function CookieBanner() {
       }
       #cc-main .cm__btn {
         border-radius: 0 !important;
+      }
+      #cc-main .cm__btns {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 10px !important;
+      }
+      #cc-main .cm__btn-group {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        gap: 8px !important;
       }
     `}</style>
   )
