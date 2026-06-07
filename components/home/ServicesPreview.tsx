@@ -207,22 +207,6 @@ function ServiceCard({
           {desc}
         </p>
 
-        {/* Arrow — appears on hover */}
-        <div className="mt-5 flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 -translate-x-2 group-hover:translate-x-0 transition-transform">
-          <span
-            style={{
-              fontFamily: 'var(--font-dm-sans), sans-serif',
-              fontSize: '11px',
-              fontWeight: 600,
-              letterSpacing: '1.5px',
-              textTransform: 'uppercase',
-              color: '#D42B2B',
-            }}
-          >
-            Scopri
-          </span>
-          <span style={{ color: '#D42B2B' }}>→</span>
-        </div>
       </CardContent>
     </Card>
   )

@@ -66,14 +66,6 @@ export default function HowItWorks() {
                 backgroundColor: '#0A0A0A',
               }}
             >
-              {/* Red top accent on first step — desktop only */}
-              {i === 0 && (
-                <div
-                  style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '2px', backgroundColor: '#D42B2B' }}
-                  className="hidden md:block"
-                />
-              )}
-
               {/* Ghost number */}
               <div style={{
                 position: 'absolute', right: '20px', bottom: '10px',
