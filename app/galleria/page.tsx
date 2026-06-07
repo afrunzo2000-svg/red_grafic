@@ -28,7 +28,7 @@ export default async function GalleriaPage() {
   }
 
   return (
-    <div style={{ backgroundColor: '#0A0A0A', minHeight: '100vh' }}>
+    <div style={{ backgroundColor: 'transparent', minHeight: '100vh' }}>
       {/* Hero */}
       <div
         style={{

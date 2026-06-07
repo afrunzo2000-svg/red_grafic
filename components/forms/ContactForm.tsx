@@ -221,12 +221,13 @@ export default function ContactForm() {
               lineHeight: 1.6,
             }}
           >
-            Ho letto e accetto la{' '}
+            Dichiaro di aver letto e compreso la{' '}
             <Link href="/privacy" style={{ color: '#D42B2B' }}>
               Privacy Policy
             </Link>{' '}
-            e acconsento al trattamento dei miei dati personali ai sensi del GDPR
-            (Reg. UE 679/2016) e del D.Lgs. 196/2003 (Codice Privacy). *
+            e prendo atto che i miei dati personali saranno trattati dal Titolare
+            per rispondere alla presente richiesta, ai sensi dell&apos;art. 6, c. 1,
+            lett. b) del GDPR (misure pre-contrattuali). *
           </span>
         </label>
 

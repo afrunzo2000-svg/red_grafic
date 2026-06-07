@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Cookie Policy | Red_grafic',
-  description: 'Informativa sull\'uso dei cookie sul sito Red_grafic, ai sensi del Provvedimento del Garante dell\'8 maggio 2014.',
+  description: 'Informativa sull\'uso dei cookie sul sito Red_grafic, ai sensi delle Linee guida cookie del Garante (Provv. n. 231/2021) e del GDPR.',
 }
 
 const pStyle: React.CSSProperties = {
@@ -46,7 +46,7 @@ const tdStyle: React.CSSProperties = {
 
 export default function CookiePolicyPage() {
   return (
-    <div style={{ backgroundColor: '#0A0A0A', minHeight: '100vh' }}>
+    <div style={{ backgroundColor: 'transparent', minHeight: '100vh' }}>
       <div style={{ maxWidth: '900px', margin: '0 auto', padding: '80px 24px 120px' }}>
         {/* Header */}
         <div style={{ marginBottom: '64px', borderBottom: '1px solid #1f1f1f', paddingBottom: '48px' }}>
@@ -76,14 +76,16 @@ export default function CookiePolicyPage() {
           >
             COOKIE POLICY
           </h1>
-          <p style={{ ...pStyle, marginBottom: 0 }}>Ultimo aggiornamento: giugno 2025</p>
+          <p style={{ ...pStyle, marginBottom: 0 }}>Ultimo aggiornamento: giugno 2026</p>
         </div>
 
         {/* Intro */}
         <div style={{ marginBottom: '48px' }}>
           <p style={pStyle}>
-            La presente Cookie Policy è redatta ai sensi del Provvedimento del Garante per la
-            protezione dei dati personali dell&apos;8 maggio 2014 e del Regolamento (UE) 2016/679 (GDPR).
+            La presente Cookie Policy è redatta ai sensi delle{' '}
+            <strong style={{ color: '#F5F5F0' }}>Linee guida cookie e altri strumenti di tracciamento</strong>{' '}
+            del Garante per la protezione dei dati personali (Provvedimento n. 231 del 10 luglio 2021,
+            G.U. n. 181 del 28 luglio 2021, in vigore dal 9 gennaio 2022) e del Regolamento (UE) 2016/679 (GDPR).
           </p>
           <p style={pStyle}>
             Questa pagina descrive le tipologie di cookie utilizzati dal sito{' '}
@@ -146,9 +148,9 @@ export default function CookiePolicyPage() {
         <div style={{ marginBottom: '48px' }}>
           <h2 style={h2Style}>3. Cookie analitici</h2>
           <p style={pStyle}>
-            Questi cookie, attivati solo con il consenso dell&apos;utente, ci aiutano a capire come i
-            visitatori interagiscono con il sito, raccogliendo informazioni in forma anonima o
-            aggregata.
+            Questi cookie, qualora attivati, vengono utilizzati solo con il previo consenso
+            dell&apos;utente e ci aiutano a capire come i visitatori interagiscono con il sito,
+            raccogliendo informazioni in forma anonima o aggregata.
           </p>
           <div style={{ overflowX: 'auto' }}>
             <table style={{ width: '100%', borderCollapse: 'collapse', backgroundColor: '#111111' }}>
@@ -163,25 +165,19 @@ export default function CookiePolicyPage() {
               </thead>
               <tbody>
                 <tr>
-                  <td style={tdStyle}>_ga</td>
-                  <td style={tdStyle}>Google Analytics</td>
-                  <td style={tdStyle}>Distingue gli utenti per l&apos;analisi del traffico</td>
-                  <td style={tdStyle}>2 anni</td>
-                  <td style={tdStyle}>HTTP</td>
-                </tr>
-                <tr>
-                  <td style={{ ...tdStyle, backgroundColor: '#0A0A0A' }}>_ga_*</td>
-                  <td style={{ ...tdStyle, backgroundColor: '#0A0A0A' }}>Google Analytics</td>
-                  <td style={{ ...tdStyle, backgroundColor: '#0A0A0A' }}>Mantiene lo stato della sessione</td>
-                  <td style={{ ...tdStyle, backgroundColor: '#0A0A0A' }}>2 anni</td>
-                  <td style={{ ...tdStyle, backgroundColor: '#0A0A0A' }}>HTTP</td>
+                  <td style={tdStyle}>—</td>
+                  <td style={tdStyle}>—</td>
+                  <td style={tdStyle}>Nessun cookie analitico attualmente in uso</td>
+                  <td style={tdStyle}>—</td>
+                  <td style={tdStyle}>—</td>
                 </tr>
               </tbody>
             </table>
           </div>
-          <p style={{ ...pStyle, marginTop: '12px', fontSize: '13px' }}>
-            I cookie di Google Analytics sono configurati con anonimizzazione dell&apos;IP attiva.
-            Per ulteriori informazioni: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" style={{ color: '#D42B2B' }}>policies.google.com/privacy</a>
+          <p style={{ ...pStyle, marginTop: '12px', fontSize: '13px', fontStyle: 'italic' }}>
+            Qualora in futuro venissero introdotti strumenti di analisi (es. Google Analytics),
+            questa sezione sarà aggiornata prima dell&apos;attivazione e il consenso sarà richiesto
+            tramite il banner cookie.
           </p>
         </div>
 
@@ -218,12 +214,15 @@ export default function CookiePolicyPage() {
 
         {/* Gestione preferenze */}
         <div style={{ marginBottom: '48px' }}>
-          <h2 style={h2Style}>5. Gestione delle preferenze</h2>
+          <h2 style={h2Style}>5. Gestione delle preferenze e revoca del consenso</h2>
           <p style={pStyle}>
-            Le preferenze sui cookie possono essere modificate in qualsiasi momento tramite il
-            pannello di gestione del consenso, accessibile cliccando su{' '}
+            Ai sensi delle Linee guida Garante n. 231/2021, il rifiuto dei cookie non essenziali deve
+            essere accessibile con la stessa facilità dell&apos;accettazione. Le preferenze possono
+            essere <strong style={{ color: '#F5F5F0' }}>modificate o revocate in qualsiasi momento</strong>{' '}
+            tramite il pannello di gestione del consenso, accessibile cliccando su{' '}
             <strong style={{ color: '#F5F5F0' }}>&quot;Gestisci preferenze&quot;</strong> nel banner
-            cookie o visitando nuovamente questa pagina.
+            cookie o visitando nuovamente questa pagina. La revoca del consenso non pregiudica la
+            liceità del trattamento basata sul consenso prestato prima della revoca.
           </p>
           <p style={pStyle}>
             È inoltre possibile gestire i cookie direttamente dal proprio browser:

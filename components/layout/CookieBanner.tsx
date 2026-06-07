@@ -37,7 +37,7 @@ export default function CookieBanner() {
               consentModal: {
                 title: 'Utilizziamo i cookie',
                 description:
-                  'Questo sito utilizza cookie tecnici necessari al funzionamento e, previo consenso, cookie analitici e di marketing. Per maggiori informazioni visita <a href="https://www.garante.it" target="_blank" rel="noopener noreferrer">www.garante.it</a> e la nostra <a href="/cookie-policy">Cookie Policy</a>.',
+                  'Utilizziamo cookie tecnici necessari al funzionamento del sito. Cookie analitici o di marketing vengono attivati <strong>solo con il tuo consenso esplicito</strong>, che puoi revocare in qualsiasi momento. Puoi rifiutare i cookie non essenziali con la stessa facilità con cui li accetti. Per maggiori informazioni consulta la nostra <a href="/cookie-policy">Cookie Policy</a>.',
                 acceptAllBtn: 'Accetta tutti',
                 acceptNecessaryBtn: 'Solo necessari',
                 showPreferencesBtn: 'Gestisci preferenze',
@@ -70,7 +70,7 @@ export default function CookieBanner() {
                   {
                     title: 'Ulteriori informazioni',
                     description:
-                      'Per qualsiasi domanda relativa al trattamento dei dati, contattaci a <a href="mailto:arturoalessiofrunzo@gmail.com">arturoalessiofrunzo@gmail.com</a>. Per maggiori informazioni sul trattamento dei dati personali, visita il sito del <a href="https://www.garante.it" target="_blank" rel="noopener noreferrer">Garante per la protezione dei dati personali</a>.',
+                      'Puoi revocare o modificare il consenso in qualsiasi momento tramite questo pannello. Per domande sul trattamento dei dati contattaci a <a href="mailto:arturoalessiofrunzo@gmail.com">arturoalessiofrunzo@gmail.com</a>. Informativa completa: <a href="/privacy">Privacy Policy</a> · <a href="/cookie-policy">Cookie Policy</a>. Autorità di controllo: <a href="https://www.garanteprivacy.it" target="_blank" rel="noopener noreferrer">Garante per la protezione dei dati personali</a> (Provv. n. 231/2021).',
                   },
                 ],
               },

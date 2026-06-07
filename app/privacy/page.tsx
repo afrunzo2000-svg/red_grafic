@@ -38,7 +38,7 @@ const liStyle: React.CSSProperties = {
 
 export default function PrivacyPage() {
   return (
-    <div style={{ backgroundColor: '#0A0A0A', minHeight: '100vh' }}>
+    <div style={{ backgroundColor: 'transparent', minHeight: '100vh' }}>
       <div style={{ maxWidth: '800px', margin: '0 auto', padding: '80px 24px 120px' }}>
         {/* Header */}
         <div style={{ marginBottom: '64px', borderBottom: '1px solid #1f1f1f', paddingBottom: '48px' }}>
@@ -69,7 +69,7 @@ export default function PrivacyPage() {
             PRIVACY POLICY
           </h1>
           <p style={{ ...pStyle, marginBottom: 0 }}>
-            Ultimo aggiornamento: giugno 2025
+            Ultimo aggiornamento: giugno 2026
           </p>
         </div>
 
@@ -97,6 +97,7 @@ export default function PrivacyPage() {
               <strong>Arturo Alessio Frunzo</strong>
             </p>
             <p style={{ ...pStyle, marginBottom: '4px' }}>Capaccio Paestum (SA), 84047 — Italia</p>
+            <p style={{ ...pStyle, marginBottom: '4px' }}>P.IVA / C.F.: [inserire codice fiscale/P.IVA]</p>
             <p style={{ ...pStyle, marginBottom: '4px' }}>
               Email:{' '}
               <a href="mailto:arturoalessiofrunzo@gmail.com" style={{ color: '#D42B2B' }}>
@@ -256,9 +257,9 @@ export default function PrivacyPage() {
           <ul style={{ listStyle: 'none', padding: 0 }}>
             {[
               'Regolamento (UE) 2016/679 del Parlamento Europeo e del Consiglio (GDPR)',
-              'D.Lgs. 30 giugno 2003, n. 196 — Codice in materia di protezione dei dati personali',
+              'D.Lgs. 30 giugno 2003, n. 196 — Codice in materia di protezione dei dati personali, come modificato dal D.Lgs. 101/2018',
               'D.Lgs. 10 agosto 2018, n. 101 — Adeguamento del Codice Privacy al GDPR',
-              'Provvedimento del Garante dell\'8 maggio 2014 sui cookie',
+              'Linee guida cookie e altri strumenti di tracciamento del Garante — Provvedimento n. 231 del 10 luglio 2021 (G.U. n. 181 del 28 luglio 2021, in vigore dal 9 gennaio 2022)',
             ].map((item, i) => (
               <li key={i} style={liStyle}>
                 <span style={{ color: '#D42B2B', position: 'absolute', left: 0 }}>—</span>
@@ -278,9 +279,49 @@ export default function PrivacyPage() {
           </p>
         </div>
 
-        {/* 9. Modifiche */}
+        {/* 9. Terze parti e social media */}
         <div style={sectionStyle}>
-          <h2 style={h2Style}>9. Modifiche alla presente informativa</h2>
+          <h2 style={h2Style}>9. Terze parti, social media e WhatsApp</h2>
+          <p style={pStyle}>
+            Il sito contiene collegamenti a profili e servizi di terze parti. Cliccando su tali
+            collegamenti, il dispositivo dell&apos;utente può stabilire una connessione con i server
+            delle seguenti piattaforme, le quali potrebbero raccogliere dati autonomamente:
+          </p>
+          <ul style={{ listStyle: 'none', padding: 0 }}>
+            {[
+              'Instagram / Meta Platforms Ireland Ltd. — trattamento dati secondo la Privacy Policy di Meta (https://privacycenter.instagram.com)',
+              'WhatsApp Ireland Ltd. (Meta) — trattamento dati secondo la Privacy Policy di WhatsApp (https://www.whatsapp.com/legal/privacy-policy)',
+            ].map((item, i) => (
+              <li key={i} style={liStyle}>
+                <span style={{ color: '#D42B2B', position: 'absolute', left: 0 }}>—</span>
+                {item}
+              </li>
+            ))}
+          </ul>
+          <p style={pStyle}>
+            Il Titolare non è responsabile del trattamento effettuato da tali piattaforme,
+            che operano in qualità di titolari autonomi. Si consiglia di consultare le
+            rispettive informative privacy prima di interagire con tali servizi.
+          </p>
+        </div>
+
+        {/* 10. Responsabile della protezione dei dati (DPO) */}
+        <div style={sectionStyle}>
+          <h2 style={h2Style}>10. Responsabile della protezione dei dati (DPO)</h2>
+          <p style={pStyle}>
+            Ai sensi dell&apos;art. 37 del Regolamento (UE) 2016/679, la nomina di un Responsabile
+            della Protezione dei Dati (Data Protection Officer) non è obbligatoria per il presente
+            Titolare, in quanto il trattamento non è effettuato da un&apos;autorità pubblica, non
+            comporta il monitoraggio sistematico su larga scala degli interessati, né riguarda
+            categorie particolari di dati su larga scala. Per qualsiasi questione relativa al
+            trattamento dei dati, contattare direttamente il Titolare all&apos;indirizzo indicato
+            nella sezione 1.
+          </p>
+        </div>
+
+        {/* 11. Modifiche */}
+        <div style={sectionStyle}>
+          <h2 style={h2Style}>11. Modifiche alla presente informativa</h2>
           <p style={pStyle}>
             Il Titolare si riserva il diritto di apportare modifiche alla presente informativa in
             qualsiasi momento, dandone pubblicità agli utenti su questa pagina. Si prega pertanto

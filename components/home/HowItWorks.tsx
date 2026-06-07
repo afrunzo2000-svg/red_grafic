@@ -51,8 +51,8 @@ export default function HowItWorks() {
         <div
           style={{
             display: 'grid',
-            gap: '1px',
-            backgroundColor: '#1f1f1f',
+            gap: '12px',
+            backgroundColor: 'transparent',
           }}
           className="grid-cols-1 md:grid-cols-3"
         >
@@ -63,7 +63,8 @@ export default function HowItWorks() {
                 padding: '48px 40px',
                 position: 'relative',
                 overflow: 'hidden',
-                backgroundColor: 'transparent',
+                backgroundColor: '#111111',
+                border: '1px solid #1f1f1f',
               }}
             >
               {/* Ghost number */}
