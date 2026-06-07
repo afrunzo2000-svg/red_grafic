@@ -384,13 +384,15 @@ export default function InfoPage() {
               <div
                 style={{
                   position: 'absolute',
+                  zIndex: 0,
                   fontFamily: 'var(--font-bebas), sans-serif',
-                  fontSize: 'clamp(52px, 8vw, 120px)',
+                  fontSize: 'clamp(48px, 5vw, 72px)',
                   color: '#1A1A1A',
                   bottom: '8px',
                   right: '10px',
                   lineHeight: 1,
                   userSelect: 'none',
+                  pointerEvents: 'none',
                 }}
               >
                 {v.num}

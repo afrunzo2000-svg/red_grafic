@@ -122,13 +122,15 @@ export default async function ServiziPage() {
                 <div
                   style={{
                     position: 'absolute',
+                    zIndex: 0,
                     fontFamily: 'var(--font-bebas), sans-serif',
-                    fontSize: 'clamp(100px, 14vw, 180px)',
+                    fontSize: 'clamp(72px, 10vw, 120px)',
                     color: '#111111',
                     userSelect: 'none',
                     lineHeight: 1,
-                    top: '-20px',
+                    top: '-10px',
                     left: '-10px',
+                    pointerEvents: 'none',
                   }}
                 >
                   {s.num}

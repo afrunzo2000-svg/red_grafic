@@ -157,7 +157,7 @@ function ServiceCard({
       {/* Ghost number */}
       <div
         className="absolute bottom-3 right-4 select-none pointer-events-none font-bebas leading-none text-[#1A1A1A] group-hover:text-[#1f1f1f] transition-colors duration-300"
-        style={{ fontSize: 'clamp(52px, 7vw, 80px)' }}
+        style={{ fontSize: 'clamp(48px, 5vw, 72px)', zIndex: 0 }}
       >
         {num}
       </div>
