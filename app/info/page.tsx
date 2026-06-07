@@ -385,7 +385,7 @@ export default function InfoPage() {
                 style={{
                   position: 'absolute',
                   fontFamily: 'var(--font-bebas), sans-serif',
-                  fontSize: '120px',
+                  fontSize: 'clamp(52px, 8vw, 120px)',
                   color: '#1A1A1A',
                   bottom: '8px',
                   right: '10px',
