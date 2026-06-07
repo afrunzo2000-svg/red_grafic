@@ -114,6 +114,8 @@ export default function Footer() {
         <div className="flex flex-col gap-2 items-start md:flex-row md:items-center md:justify-between">
           <p style={{ fontFamily: 'var(--font-dm-sans)', fontSize: '11px', color: '#444444', margin: 0 }}>
             © {new Date().getFullYear()} Red_grafic · Arturo · Capaccio Paestum (SA)
+            <span style={{ marginLeft: '12px', color: '#333333' }}>·</span>
+            <span style={{ marginLeft: '12px' }}>Created by <span style={{ color: '#888888' }}>RBC Design</span> · All rights reserved</span>
           </p>
           <div style={{ display: 'flex', gap: '20px' }}>
             {[{ href: '/privacy', label: 'Privacy' }, { href: '/cookie-policy', label: 'Cookie Policy' }].map((l) => (

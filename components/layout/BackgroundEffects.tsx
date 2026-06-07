@@ -14,17 +14,11 @@ export default function BackgroundEffects() {
         overflow: 'hidden',
       }}
     >
-      {/* Orb 1 — top-right, large, primary glow */}
+      {/* Orb 1 — top-right, primary glow */}
       <div className="bg-orb orb-1" />
 
-      {/* Orb 2 — bottom-left, medium */}
+      {/* Orb 2 — bottom-left */}
       <div className="bg-orb orb-2" />
-
-      {/* Orb 3 — center, slow pulse */}
-      <div className="bg-orb orb-3" />
-
-      {/* Orb 4 — top-left, accent */}
-      <div className="bg-orb orb-4" />
 
       {/* Vignette edges */}
       <div

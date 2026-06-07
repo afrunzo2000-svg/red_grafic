@@ -9,31 +9,26 @@ const services = [
     num: '01',
     title: 'Loghi & Brand Identity',
     desc: 'Identità visive che raccontano chi sei. Marchi memorabili, costruiti per durare.',
-    icon: '◈',
   },
   {
     num: '02',
     title: 'Grafica Pubblicitaria',
     desc: 'Materiali visivi che catturano, comunicano e convertono.',
-    icon: '◉',
   },
   {
     num: '03',
     title: 'Illustrazioni',
     desc: 'Immagini originali a mano o digitali, con uno stile inconfondibile.',
-    icon: '◐',
   },
   {
     num: '04',
     title: 'Inviti & Locandine',
     desc: 'Dal matrimonio all\'evento aziendale: ogni occasione merita un design unico.',
-    icon: '◆',
   },
   {
     num: '05',
     title: 'Character Design',
     desc: 'Personaggi e mascotte che danno vita al tuo brand con carattere.',
-    icon: '◎',
   },
 ]
 
@@ -69,7 +64,7 @@ export default function ServicesPreview() {
           className="grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
         >
           {services.map((s) => (
-            <ServiceCard key={s.num} {...s} />
+            <ServiceCard key={s.num} num={s.num} title={s.title} desc={s.desc} />
           ))}
 
           {/* CTA card */}
@@ -149,12 +144,10 @@ function ServiceCard({
   num,
   title,
   desc,
-  icon,
 }: {
   num: string
   title: string
   desc: string
-  icon: string
 }) {
   return (
     <Card className="relative overflow-hidden ring-0 border border-[#1f1f1f] bg-[#111111] group hover:border-[#D42B2B]/50 hover:bg-[#141414] transition-all duration-300">
@@ -170,8 +163,8 @@ function ServiceCard({
       </div>
 
       <CardHeader className="pt-8 px-8 pb-3">
-        {/* Number + icon row */}
-        <div className="flex items-center justify-between mb-4">
+        {/* Number row */}
+        <div className="flex items-center mb-4">
           <span
             style={{
               fontFamily: 'var(--font-dm-sans), sans-serif',
@@ -182,11 +175,6 @@ function ServiceCard({
             }}
           >
             {num}
-          </span>
-          <span
-            className="text-[#2A2A2A] group-hover:text-[#D42B2B] transition-colors duration-300 text-lg"
-          >
-            {icon}
           </span>
         </div>
 
