@@ -7,7 +7,7 @@ const stats = [
 
 export default function StatsBar() {
   return (
-    <section style={{ backgroundColor: '#1f1f1f', borderBottom: '1px solid #1f1f1f' }}>
+    <section style={{ backgroundColor: '#0A0A0A', borderBottom: '1px solid #1f1f1f' }}>
       <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 24px' }}>
         {/* gap:1px + background:#1f1f1f on grid = divider lines on all breakpoints */}
         <div
