@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import { Menu, X } from 'lucide-react'
 
@@ -51,26 +52,14 @@ export default function Navbar() {
         }}
       >
         {/* Logo */}
-        <Link href="/" style={{ textDecoration: 'none', display: 'inline-block' }}>
-          <span
-            style={{
-              fontFamily: 'var(--font-bebas), sans-serif',
-              fontSize: '26px',
-              letterSpacing: '0.15em',
-              color: '#F5F5F0',
-              lineHeight: 1,
-              display: 'block',
-            }}
-          >
-            RED<span style={{ color: '#D42B2B' }}>_</span>GRAFIC
-          </span>
-          <div
-            style={{
-              height: '2px',
-              backgroundColor: '#D42B2B',
-              width: '100%',
-              marginTop: '3px',
-            }}
+        <Link href="/" style={{ textDecoration: 'none', display: 'inline-flex', alignItems: 'center' }}>
+          <Image
+            src="/logo.png"
+            alt="Red_grafic"
+            width={1328}
+            height={225}
+            style={{ height: '32px', width: 'auto', display: 'block' }}
+            priority
           />
         </Link>
 

@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 
 const navLinks = [
   { href: '/', label: 'Home' },
@@ -28,10 +29,8 @@ export default function Footer() {
         <div className="lg:hidden pb-8 flex flex-col gap-8">
 
           {/* Logo */}
-          <Link href="/" style={{ textDecoration: 'none' }}>
-            <span style={{ fontFamily: 'var(--font-bebas), sans-serif', fontSize: '24px', letterSpacing: '0.1em', color: '#F5F5F0' }}>
-              RED<span style={{ color: '#D42B2B' }}>_</span>GRAFIC
-            </span>
+          <Link href="/" style={{ textDecoration: 'none', display: 'inline-flex' }}>
+            <Image src="/logo.png" alt="Red_grafic" width={1328} height={225} style={{ height: '28px', width: 'auto' }} />
           </Link>
 
           {/* Nav — 2-column grid, no wrapping */}
@@ -67,10 +66,8 @@ export default function Footer() {
 
         {/* ── DESKTOP layout ── */}
         <div className="hidden lg:flex lg:items-center lg:justify-between lg:gap-8 pb-8">
-          <Link href="/" style={{ textDecoration: 'none', flexShrink: 0 }}>
-            <span style={{ fontFamily: 'var(--font-bebas), sans-serif', fontSize: '22px', letterSpacing: '0.1em', color: '#F5F5F0' }}>
-              RED<span style={{ color: '#D42B2B' }}>_</span>GRAFIC
-            </span>
+          <Link href="/" style={{ textDecoration: 'none', flexShrink: 0, display: 'inline-flex' }}>
+            <Image src="/logo.png" alt="Red_grafic" width={1328} height={225} style={{ height: '28px', width: 'auto' }} />
           </Link>
           <nav className="flex items-center gap-6">
             {navLinks.map((l) => (
