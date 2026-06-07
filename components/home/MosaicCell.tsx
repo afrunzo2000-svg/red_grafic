@@ -9,17 +9,19 @@ const MOSAIC_SEEDS = [60, 61, 62, 63, 64]
 interface MosaicCellProps {
   item: { _id: string; title: string; category: string; image?: GalleryItem['image'] }
   style?: React.CSSProperties
+  className?: string
   large?: boolean
   seedIndex?: number
 }
 
-export default function MosaicCell({ item, style, large = false, seedIndex = 0 }: MosaicCellProps) {
+export default function MosaicCell({ item, style, className, large = false, seedIndex = 0 }: MosaicCellProps) {
   const [hovered, setHovered] = useState(false)
   const seed = MOSAIC_SEEDS[seedIndex % MOSAIC_SEEDS.length]
   const imageUrl = item.image?.asset?.url ?? `https://picsum.photos/seed/${seed}/${large ? '800/900' : '500/500'}`
 
   return (
     <div
+      className={className}
       style={{ position: 'relative', overflow: 'hidden', cursor: 'pointer', backgroundColor: '#1A1A1A', ...style }}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}

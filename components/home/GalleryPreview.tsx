@@ -67,26 +67,30 @@ export default async function GalleryPreview() {
           </Link>
         </div>
 
-        {/* Asymmetric mosaic */}
+        {/* Mosaic: 2-col on mobile, asymmetric 3-col on desktop */}
         <div
-          style={{
-            display: 'grid',
-            gridTemplateColumns: '2fr 1fr 1fr',
-            gridTemplateRows: 'auto auto',
-            gap: '4px',
-          }}
+          style={{ display: 'grid', gap: '4px' }}
+          className="grid-cols-2 lg:grid-cols-[2fr_1fr_1fr]"
         >
-          {/* Large cell */}
+          {/* Large cell — spans 2 rows on desktop only */}
           <MosaicCell
             item={displayItems[0] ?? { _id: 'p0', title: 'Portfolio', category: 'Loghi' }}
-            style={{ gridRow: '1 / 3', minHeight: '480px' }}
+            style={{ minHeight: '200px' }}
+            className="lg:row-span-2 lg:min-h-[480px]"
             large
             seedIndex={0}
           />
-          {/* 4 smaller cells */}
-          {displayItems.slice(1, 5).map((item, i) => (
-            <MosaicCell key={item._id} item={item} style={{ minHeight: '236px' }} seedIndex={i + 1} />
+          {/* 3 smaller cells (4 on desktop) */}
+          {displayItems.slice(1, 4).map((item, i) => (
+            <MosaicCell key={item._id} item={item} style={{ minHeight: '200px' }} className="lg:min-h-[236px]" seedIndex={i + 1} />
           ))}
+          {/* 4th small cell — hidden on mobile, visible on desktop */}
+          <MosaicCell
+            item={displayItems[4] ?? { _id: 'p4', title: 'Logo', category: 'Loghi' }}
+            style={{ minHeight: '200px' }}
+            className="hidden lg:block lg:min-h-[236px]"
+            seedIndex={4}
+          />
         </div>
       </div>
     </section>

@@ -77,7 +77,7 @@ export default function HowItWorks() {
               {/* Ghost number */}
               <div style={{
                 position: 'absolute', right: '20px', bottom: '10px',
-                fontFamily: 'var(--font-bebas)', fontSize: '100px',
+                fontFamily: 'var(--font-bebas)', fontSize: 'clamp(52px, 7vw, 100px)',
                 color: '#111111', userSelect: 'none', lineHeight: 1,
               }}>
                 {step.num}

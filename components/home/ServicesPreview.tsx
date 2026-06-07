@@ -183,7 +183,7 @@ function ServiceCard({ num, title, desc }: { num: string; title: string; desc: s
         style={{
           position: 'absolute',
           fontFamily: 'var(--font-bebas), sans-serif',
-          fontSize: '100px',
+          fontSize: 'clamp(52px, 7vw, 100px)',
           color: '#1A1A1A',
           userSelect: 'none',
           lineHeight: 1,
