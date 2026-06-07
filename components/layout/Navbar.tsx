@@ -76,7 +76,7 @@ export default function Navbar() {
 
         {/* Desktop links */}
         <div
-          style={{ display: 'flex', alignItems: 'center', gap: '40px' }}
+          style={{ alignItems: 'center', gap: '40px' }}
           className="hidden lg:flex"
         >
           {links.map((l) => (

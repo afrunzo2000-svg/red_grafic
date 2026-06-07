@@ -122,6 +122,15 @@ export default function CookieBanner() {
         flex-wrap: wrap !important;
         gap: 8px !important;
       }
+      #cc-main .cm__btn.cm__btn--secondary {
+        background: transparent !important;
+        border: 1px solid #F5F5F0 !important;
+        color: #F5F5F0 !important;
+      }
+      #cc-main .cm__btn.cm__btn--secondary:hover {
+        background: #1A1A1A !important;
+        color: #F5F5F0 !important;
+      }
     `}</style>
   )
 }

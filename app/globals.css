@@ -78,9 +78,11 @@
 
   html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
   }
 
   body {
+    overflow-x: hidden;
     background-color: #0A0A0A;
     background-image:
       radial-gradient(ellipse 55% 35% at 96% 2%, rgba(212, 43, 43, 0.13) 0%, transparent 70%),

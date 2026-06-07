@@ -34,72 +34,19 @@ export default function InfoPage() {
           maxWidth: '1400px',
           margin: '0 auto',
           display: 'grid',
-          gridTemplateColumns: '1fr',
-          minHeight: '80vh',
           borderBottom: '1px solid #1f1f1f',
         }}
-        className="lg:grid-cols-2"
+        className="grid-cols-1 lg:grid-cols-2 lg:min-h-[80vh]"
       >
-        {/* Visual */}
+        {/* Text — first in DOM = top on mobile, left on desktop */}
         <div
           style={{
-            backgroundColor: '#111111',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            minHeight: '400px',
-            position: 'relative',
-            overflow: 'hidden',
-          }}
-        >
-          <div
-            style={{
-              position: 'absolute',
-              fontFamily: 'var(--font-bebas), sans-serif',
-              fontSize: 'clamp(100px, 20vw, 240px)',
-              color: '#0A0A0A',
-              userSelect: 'none',
-              lineHeight: 0.9,
-              letterSpacing: '0.03em',
-              textAlign: 'center',
-            }}
-          >
-            AAF
-          </div>
-          <div
-            style={{
-              position: 'relative',
-              zIndex: 1,
-              width: '160px',
-              height: '160px',
-              backgroundColor: '#1A1A1A',
-              border: '1px solid #2A2A2A',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-            }}
-          >
-            <span
-              style={{
-                fontFamily: 'var(--font-bebas), sans-serif',
-                fontSize: '64px',
-                color: '#D42B2B',
-                letterSpacing: '0.05em',
-              }}
-            >
-              AF
-            </span>
-          </div>
-        </div>
-
-        {/* Text */}
-        <div
-          style={{
-            padding: '80px 48px',
+            padding: '64px 24px',
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'center',
           }}
+          className="lg:px-12 lg:py-20"
         >
           <span
             style={{
@@ -168,6 +115,59 @@ export default function InfoPage() {
             Parliamo →
           </Link>
         </div>
+
+        {/* Visual — bottom on mobile, right on desktop */}
+        <div
+          style={{
+            backgroundColor: '#111111',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            minHeight: '280px',
+            position: 'relative',
+            overflow: 'hidden',
+          }}
+          className="lg:min-h-full"
+        >
+          <div
+            style={{
+              position: 'absolute',
+              fontFamily: 'var(--font-bebas), sans-serif',
+              fontSize: 'clamp(100px, 20vw, 240px)',
+              color: '#0A0A0A',
+              userSelect: 'none',
+              lineHeight: 0.9,
+              letterSpacing: '0.03em',
+              textAlign: 'center',
+            }}
+          >
+            AAF
+          </div>
+          <div
+            style={{
+              position: 'relative',
+              zIndex: 1,
+              width: '160px',
+              height: '160px',
+              backgroundColor: '#1A1A1A',
+              border: '1px solid #2A2A2A',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+            }}
+          >
+            <span
+              style={{
+                fontFamily: 'var(--font-bebas), sans-serif',
+                fontSize: '64px',
+                color: '#D42B2B',
+                letterSpacing: '0.05em',
+              }}
+            >
+              AF
+            </span>
+          </div>
+        </div>
       </div>
 
       {/* Filosofia */}
@@ -182,11 +182,10 @@ export default function InfoPage() {
         <div
           style={{
             display: 'grid',
-            gridTemplateColumns: '1fr',
             gap: '64px',
             alignItems: 'center',
           }}
-          className="lg:grid-cols-2"
+          className="grid-cols-1 lg:grid-cols-2"
         >
           <div>
             <span
@@ -368,10 +367,9 @@ export default function InfoPage() {
         <div
           style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(1, 1fr)',
             gap: '4px',
           }}
-          className="md:grid-cols-3"
+          className="grid-cols-1 md:grid-cols-3"
         >
           {values.map((v) => (
             <div

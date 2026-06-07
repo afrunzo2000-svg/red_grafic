@@ -13,9 +13,8 @@ export default function AboutTeaser() {
           maxWidth: '1400px',
           margin: '0 auto',
           display: 'grid',
-          gridTemplateColumns: '1fr',
         }}
-        className="md:grid-cols-2"
+        className="grid-cols-1 md:grid-cols-2"
       >
         {/* Visual */}
         <div

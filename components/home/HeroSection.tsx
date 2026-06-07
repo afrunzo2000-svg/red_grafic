@@ -10,14 +10,13 @@ export default function HeroSection() {
         style={{
           minHeight: 'calc(100vh - 72px)',
           display: 'grid',
-          gridTemplateColumns: '1fr',
           alignItems: 'center',
           padding: '80px 24px',
           maxWidth: '1400px',
           margin: '0 auto',
           gap: '64px',
         }}
-        className="lg:grid-cols-2"
+        className="grid-cols-1 lg:grid-cols-2"
       >
         {/* Left: Text */}
         <div style={{ position: 'relative' }}>
@@ -93,12 +92,12 @@ export default function HeroSection() {
           </div>
         </div>
 
-        {/* Right: Visual composition */}
+        {/* Right: Visual composition — desktop only */}
         <div
+          className="hidden lg:grid"
           style={{
             position: 'relative',
             minHeight: '520px',
-            display: 'grid',
             gridTemplateColumns: '1fr 1fr',
             gridTemplateRows: '1fr 1fr',
             gap: '4px',

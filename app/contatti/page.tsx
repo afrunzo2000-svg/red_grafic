@@ -84,10 +84,9 @@ export default function ContattiPage() {
         <div
           style={{
             display: 'grid',
-            gridTemplateColumns: '1fr',
             gap: '80px',
           }}
-          className="lg:grid-cols-3"
+          className="grid-cols-1 lg:grid-cols-3"
         >
           {/* Form — 2/3 */}
           <div className="lg:col-span-2">

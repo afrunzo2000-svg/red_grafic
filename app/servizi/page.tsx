@@ -111,12 +111,11 @@ export default async function ServiziPage() {
             <div
               style={{
                 display: 'grid',
-                gridTemplateColumns: '1fr',
                 gap: '48px',
                 padding: '80px 0',
                 position: 'relative',
               }}
-              className="lg:grid-cols-2"
+              className="grid-cols-1 lg:grid-cols-2"
             >
               {/* Left: Number + Title */}
               <div style={{ position: 'relative' }}>

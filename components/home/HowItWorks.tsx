@@ -51,11 +51,10 @@ export default function HowItWorks() {
         <div
           style={{
             display: 'grid',
-            gridTemplateColumns: '1fr',
             gap: '1px',
             backgroundColor: '#1f1f1f',
           }}
-          className="md:grid-cols-3"
+          className="grid-cols-1 md:grid-cols-3"
         >
           {steps.map((step, i) => (
             <div

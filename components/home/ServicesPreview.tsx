@@ -61,11 +61,10 @@ export default function ServicesPreview() {
         <div
           style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(2, 1fr)',
             gap: '1px',
             backgroundColor: '#1f1f1f',
           }}
-          className="md:grid-cols-3"
+          className="grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
         >
           {services.map((s) => (
             <ServiceCard key={s.num} {...s} />
