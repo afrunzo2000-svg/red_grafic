@@ -99,6 +99,7 @@ export default function Navbar() {
           ))}
           <Link
             href="/prenotazione"
+            className="hover:bg-[#D42B2B] hover:text-[#F5F5F0] transition-colors duration-200"
             style={{
               fontFamily: 'var(--font-dm-sans), sans-serif',
               fontSize: '13px',
@@ -109,15 +110,6 @@ export default function Navbar() {
               color: '#D42B2B',
               border: '1px solid #D42B2B',
               padding: '8px 20px',
-              transition: 'background-color 0.2s, color 0.2s',
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.backgroundColor = '#D42B2B'
-              e.currentTarget.style.color = '#F5F5F0'
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.backgroundColor = 'transparent'
-              e.currentTarget.style.color = '#D42B2B'
             }}
           >
             Prenota ora

@@ -12,6 +12,7 @@ export default function BackgroundEffects() {
         pointerEvents: 'none',
         zIndex: 0,
         overflow: 'hidden',
+        backgroundColor: '#0A0A0A', // provides the dark canvas — sections can now be transparent
       }}
     >
       {/* Orb 1 — top-right, primary glow */}

@@ -4,7 +4,7 @@ export default function AboutTeaser() {
   return (
     <section
       style={{
-        backgroundColor: '#0A0A0A',
+        backgroundColor: 'transparent',
         borderBottom: '1px solid #1f1f1f',
       }}
     >

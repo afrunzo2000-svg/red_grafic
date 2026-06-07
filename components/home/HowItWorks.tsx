@@ -23,7 +23,7 @@ const steps = [
 
 export default function HowItWorks() {
   return (
-    <section style={{ backgroundColor: '#0A0A0A', borderBottom: '1px solid #1f1f1f', padding: '100px 0' }}>
+    <section style={{ backgroundColor: 'transparent', borderBottom: '1px solid #1f1f1f', padding: '100px 0' }}>
       <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 24px' }}>
         {/* Header */}
         <div style={{ marginBottom: '40px', display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', flexWrap: 'wrap', gap: '16px' }}>
@@ -63,7 +63,7 @@ export default function HowItWorks() {
                 padding: '48px 40px',
                 position: 'relative',
                 overflow: 'hidden',
-                backgroundColor: '#0A0A0A',
+                backgroundColor: 'transparent',
               }}
             >
               {/* Ghost number */}

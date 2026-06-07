@@ -5,7 +5,7 @@ import SectionTag from '@/components/shared/SectionTag'
 export default function HeroSection() {
   return (
     // section ist immer full-width → kein Containerrand sichtbar
-    <section style={{ backgroundColor: '#0A0A0A' }}>
+    <section style={{ backgroundColor: 'transparent' }}>
       <div
         style={{
           minHeight: 'calc(100vh - 72px)',

@@ -7,7 +7,7 @@ const stats = [
 
 export default function StatsBar() {
   return (
-    <section style={{ backgroundColor: '#0A0A0A', borderBottom: '1px solid #1f1f1f' }}>
+    <section style={{ backgroundColor: 'transparent', borderBottom: '1px solid #1f1f1f' }}>
       <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 24px' }}>
         {/* gap:1px + background:#1f1f1f on grid = divider lines on all breakpoints */}
         <div
@@ -24,7 +24,7 @@ export default function StatsBar() {
               key={i}
               style={{
                 padding: '40px 32px',
-                backgroundColor: '#0A0A0A',
+                backgroundColor: 'transparent',
               }}
             >
               <div style={{ fontFamily: 'var(--font-bebas), sans-serif', fontSize: '56px', lineHeight: 1, letterSpacing: '0.03em', color: '#F5F5F0' }}>

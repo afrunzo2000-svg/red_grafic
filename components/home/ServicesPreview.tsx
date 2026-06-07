@@ -36,7 +36,7 @@ export default function ServicesPreview() {
   return (
     <section
       style={{
-        backgroundColor: '#0A0A0A',
+        backgroundColor: 'transparent',
         padding: '120px 24px',
         borderBottom: '1px solid #1f1f1f',
       }}
