@@ -23,8 +23,8 @@ const steps = [
 
 export default function HowItWorks() {
   return (
-    <section style={{ backgroundColor: '#0A0A0A', borderBottom: '1px solid #1f1f1f', padding: '100px 24px' }}>
-      <div style={{ maxWidth: '1400px', margin: '0 auto' }}>
+    <section style={{ backgroundColor: '#0A0A0A', borderBottom: '1px solid #1f1f1f', padding: '100px 0' }}>
+      <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 24px' }}>
         {/* Header */}
         <div style={{ marginBottom: '64px', display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', flexWrap: 'wrap', gap: '16px' }}>
           <div>
@@ -41,21 +41,41 @@ export default function HowItWorks() {
             Tre passi per trasformare un&apos;idea in un progetto grafico finito.
           </p>
         </div>
+      </div>
 
-        {/* Steps */}
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr', position: 'relative' }} className="md:grid-cols-3">
+      {/* Steps — full-width gap-as-divider grid */}
+      <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 24px' }}>
+        {/* Horizontal divider between header and steps */}
+        <div style={{ height: '1px', backgroundColor: '#1f1f1f', marginBottom: '0' }} />
+
+        <div
+          style={{
+            display: 'grid',
+            gridTemplateColumns: '1fr',
+            gap: '1px',
+            backgroundColor: '#1f1f1f',
+          }}
+          className="md:grid-cols-3"
+        >
           {steps.map((step, i) => (
             <div
               key={step.num}
               style={{
                 padding: '48px 40px',
-                borderTop: '1px solid #1f1f1f',
-                borderRight: i < steps.length - 1 ? '1px solid #1f1f1f' : 'none',
                 position: 'relative',
                 overflow: 'hidden',
+                backgroundColor: '#0A0A0A',
               }}
             >
-              {/* Ghost number background */}
+              {/* Red top accent on first step — desktop only */}
+              {i === 0 && (
+                <div
+                  style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '2px', backgroundColor: '#D42B2B' }}
+                  className="hidden md:block"
+                />
+              )}
+
+              {/* Ghost number */}
               <div style={{
                 position: 'absolute', right: '20px', bottom: '10px',
                 fontFamily: 'var(--font-bebas)', fontSize: '100px',
@@ -64,16 +84,12 @@ export default function HowItWorks() {
                 {step.num}
               </div>
 
-              {/* Red top bar */}
-              <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '2px', backgroundColor: i === 0 ? '#D42B2B' : 'transparent' }} />
-
               <div style={{ position: 'relative', zIndex: 1 }}>
-                {/* Step number */}
                 <div style={{ fontFamily: 'var(--font-dm-sans)', fontSize: '11px', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', color: '#D42B2B', marginBottom: '20px' }}>
                   {step.num}
                 </div>
 
-                {/* Connector arrow (not on last) */}
+                {/* Connector arrow — desktop only */}
                 {i < steps.length - 1 && (
                   <div style={{
                     position: 'absolute', right: '-20px', top: '50%',
