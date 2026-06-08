@@ -18,8 +18,9 @@ const nextConfig: NextConfig = {
   },
   async headers() {
     return [
+      // Security headers for all routes except /studio
       {
-        source: '/(.*)',
+        source: '/((?!studio).*)',
         headers: [
           { key: 'X-Frame-Options', value: 'DENY' },
           { key: 'X-Content-Type-Options', value: 'nosniff' },
@@ -28,6 +29,13 @@ const nextConfig: NextConfig = {
             key: 'Permissions-Policy',
             value: 'camera=(), microphone=(), geolocation=()',
           },
+        ],
+      },
+      // Minimal headers for Sanity Studio (needs iframe support)
+      {
+        source: '/studio(.*)',
+        headers: [
+          { key: 'X-Content-Type-Options', value: 'nosniff' },
         ],
       },
     ]
