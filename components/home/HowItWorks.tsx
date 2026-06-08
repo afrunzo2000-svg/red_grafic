@@ -45,9 +45,6 @@ export default function HowItWorks() {
 
       {/* Steps — full-width gap-as-divider grid */}
       <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 24px' }}>
-        {/* Horizontal divider between header and steps */}
-        <div style={{ height: '1px', backgroundColor: '#1f1f1f', marginBottom: '0' }} />
-
         <div
           style={{
             display: 'grid',
