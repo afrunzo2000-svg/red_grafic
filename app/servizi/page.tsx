@@ -35,18 +35,18 @@ const defaultServices = [
   {
     _id: '4',
     num: '04',
-    title: 'Inviti & Locandine',
-    description: 'Dal matrimonio all\'evento aziendale, ogni occasione merita un design che si ricordi. Creo materiali stampabili che lasciano il segno, con attenzione maniacale ai dettagli.',
-    includes: ['Inviti matrimonio', 'Locandine eventi', 'Flyer promozionali', 'Programmi di sala', 'File print-ready ad alta risoluzione'],
-    timeframe: '4–8 giorni lavorativi',
-  },
-  {
-    _id: '5',
-    num: '05',
     title: 'Character Design',
     description: 'Personaggi e mascotte che danno vita al tuo brand con personalità e carattere. Ideali per prodotti, app, campagne pubblicitarie e merchandising.',
     includes: ['Character concept (3 varianti)', 'Character sheet completo', 'Espressioni e pose', 'File vettoriale editabile', 'Guida all\'uso'],
     timeframe: '10–20 giorni lavorativi',
+  },
+  {
+    _id: '5',
+    num: '05',
+    title: 'Inviti & Locandine',
+    description: 'Dal matrimonio all\'evento aziendale, ogni occasione merita un design che si ricordi. Creo materiali stampabili che lasciano il segno, con attenzione maniacale ai dettagli.',
+    includes: ['Inviti matrimonio', 'Locandine eventi', 'Flyer promozionali', 'Programmi di sala', 'File print-ready ad alta risoluzione'],
+    timeframe: '4–8 giorni lavorativi',
   },
 ]
 

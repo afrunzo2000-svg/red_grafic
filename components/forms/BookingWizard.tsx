@@ -29,8 +29,8 @@ const PROJECT_TYPES = [
   { id: 'logo', label: 'Logo & Brand Identity', num: '01' },
   { id: 'grafica', label: 'Grafica Pubblicitaria', num: '02' },
   { id: 'illustrazione', label: 'Illustrazione', num: '03' },
-  { id: 'inviti', label: 'Inviti / Locandine', num: '04' },
-  { id: 'character', label: 'Character Design', num: '05' },
+  { id: 'character', label: 'Character Design', num: '04' },
+  { id: 'inviti', label: 'Inviti / Locandine', num: '05' },
   { id: 'altro', label: 'Altro', num: '06' },
 ]
 

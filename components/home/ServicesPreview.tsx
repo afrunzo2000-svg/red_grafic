@@ -22,13 +22,13 @@ const services = [
   },
   {
     num: '04',
-    title: 'Inviti & Locandine',
-    desc: 'Dal matrimonio all\'evento aziendale: ogni occasione merita un design unico.',
+    title: 'Character Design',
+    desc: 'Personaggi e mascotte che danno vita al tuo brand con carattere.',
   },
   {
     num: '05',
-    title: 'Character Design',
-    desc: 'Personaggi e mascotte che danno vita al tuo brand con carattere.',
+    title: 'Inviti & Locandine',
+    desc: 'Dal matrimonio all\'evento aziendale: ogni occasione merita un design unico.',
   },
 ]
 

@@ -176,8 +176,8 @@ export default function ContactForm() {
               <option value="Logo">Logo</option>
               <option value="Grafica">Grafica</option>
               <option value="Illustrazione">Illustrazione</option>
-              <option value="Locandina">Locandina</option>
               <option value="Character">Character</option>
+              <option value="Locandina">Locandina</option>
               <option value="Altro">Altro</option>
             </select>
           </div>
