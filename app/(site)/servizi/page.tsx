@@ -55,8 +55,20 @@ export default async function ServiziPage() {
   try {
     sanityServices = await getServices()
   } catch {
-    // Sanity not configured yet
+    // Sanity not configured yet — fall back to defaults below
   }
+
+  // Normalise: use Sanity data when available, otherwise hardcoded defaults
+  const services = sanityServices.length > 0
+    ? sanityServices.map((s) => ({
+        _id: s._id,
+        num: String(s.number).padStart(2, '0'),
+        title: s.title,
+        description: s.description,
+        includes: s.includes,
+        timeframe: s.timeframe,
+      }))
+    : defaultServices
 
   return (
     <div style={{ backgroundColor: 'transparent', minHeight: '100vh' }}>
@@ -100,7 +112,7 @@ export default async function ServiziPage() {
 
       {/* Services list */}
       <div style={{ maxWidth: '1400px', margin: '0 auto' }}>
-        {defaultServices.map((s, i) => (
+        {services.map((s, i) => (
           <div
             key={s._id}
             style={{
