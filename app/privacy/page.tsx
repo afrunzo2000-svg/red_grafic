@@ -139,19 +139,19 @@ export default function PrivacyPage() {
             {[
               {
                 title: 'Risposta alle richieste di contatto e preventivo',
-                base: 'Consenso esplicito dell\'interessato (Art. 6, c. 1, lett. a GDPR)',
+                base: 'Esecuzione di misure pre-contrattuali su richiesta dell\'interessato (Art. 6, c. 1, lett. b GDPR)',
               },
               {
-                title: 'Gestione del rapporto commerciale e pre-contrattuale',
-                base: 'Esecuzione di misure pre-contrattuali (Art. 6, c. 1, lett. b GDPR)',
+                title: 'Gestione del rapporto commerciale e contrattuale',
+                base: 'Esecuzione del contratto o misure pre-contrattuali (Art. 6, c. 1, lett. b GDPR)',
               },
               {
-                title: 'Adempimento di obblighi legali',
+                title: 'Adempimento di obblighi legali (es. fiscali, contabili)',
                 base: 'Obbligo legale (Art. 6, c. 1, lett. c GDPR)',
               },
               {
-                title: 'Analisi statistica del traffico (solo se acconsentito)',
-                base: 'Consenso esplicito tramite cookie banner (Art. 6, c. 1, lett. a GDPR)',
+                title: 'Analisi statistica del traffico (non attiva; richiederà consenso se attivata)',
+                base: 'Consenso esplicito tramite cookie banner (Art. 6, c. 1, lett. a GDPR) — attualmente nessuno strumento analitico è in uso',
               },
             ].map((item, i) => (
               <div
@@ -269,19 +269,71 @@ export default function PrivacyPage() {
           </ul>
         </div>
 
-        {/* 8. Trasferimento dati */}
+        {/* 8. Responsabili del trattamento */}
         <div style={sectionStyle}>
-          <h2 style={h2Style}>8. Trasferimento dei dati</h2>
+          <h2 style={h2Style}>8. Responsabili del trattamento (Sub-Processor)</h2>
           <p style={pStyle}>
-            I dati personali non sono trasferiti a paesi terzi al di fuori dell&apos;Unione Europea.
-            Il sito è ospitato su infrastrutture localizzate nell&apos;UE o in paesi che garantiscono
-            adeguato livello di protezione ai sensi del GDPR.
+            Ai sensi dell&apos;art. 28 GDPR, il Titolare si avvale dei seguenti responsabili
+            esterni del trattamento, con i quali sono stati stipulati o sono applicabili
+            accordi di trattamento dei dati (DPA):
+          </p>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+            {[
+              {
+                name: 'Vercel Inc.',
+                role: 'Hosting, CDN e infrastruttura web',
+                detail: '340 Pine Street, Suite 701, San Francisco, CA 94104, USA',
+                note: 'Vercel elabora dati tecnici (indirizzi IP, header HTTP, log di accesso) per erogare il servizio di hosting. Vercel partecipa al Data Privacy Framework UE-USA (decisione di adeguatezza della Commissione europea del 10 luglio 2023), garantendo un livello di protezione adeguato ai sensi dell\'art. 45 GDPR.',
+                link: 'https://vercel.com/legal/privacy-policy',
+              },
+              {
+                name: 'Google LLC (Gmail)',
+                role: 'Ricezione e archiviazione delle comunicazioni email',
+                detail: '1600 Amphitheatre Parkway, Mountain View, CA 94043, USA',
+                note: 'I dati inseriti nei moduli di contatto e prenotazione (nome, email, telefono, descrizione del progetto, budget) vengono trasmessi via email e archiviati su Gmail, servizio gestito da Google LLC. Google partecipa al Data Privacy Framework UE-USA, garantendo un livello di protezione adeguato ai sensi dell\'art. 45 GDPR.',
+                link: 'https://policies.google.com/privacy',
+              },
+            ].map((p, i) => (
+              <div
+                key={i}
+                style={{
+                  backgroundColor: '#111111',
+                  padding: '20px 24px',
+                  borderLeft: '2px solid #D42B2B',
+                }}
+              >
+                <p style={{ ...pStyle, color: '#F5F5F0', marginBottom: '4px' }}>
+                  <strong>{p.name}</strong> — {p.role}
+                </p>
+                <p style={{ ...pStyle, marginBottom: '4px', fontSize: '13px' }}>{p.detail}</p>
+                <p style={{ ...pStyle, marginBottom: '4px', fontSize: '13px' }}>{p.note}</p>
+                <a href={p.link} target="_blank" rel="noopener noreferrer" style={{ color: '#D42B2B', fontSize: '13px', fontFamily: 'var(--font-dm-sans)' }}>
+                  Privacy Policy →
+                </a>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* 9 (ex-8). Trasferimento dati */}
+        <div style={sectionStyle}>
+          <h2 style={h2Style}>9. Trasferimento dei dati verso paesi terzi</h2>
+          <p style={pStyle}>
+            In ragione dei responsabili del trattamento indicati nella sezione 8, alcuni dati
+            personali sono trasferiti negli <strong style={{ color: '#F5F5F0' }}>Stati Uniti d&apos;America</strong>{' '}
+            (Vercel Inc. e Google LLC). Tali trasferimenti sono legittimi in quanto entrambi i
+            destinatari aderiscono al{' '}
+            <strong style={{ color: '#F5F5F0' }}>Data Privacy Framework UE-USA</strong>{' '}
+            (DPF), adottato dalla Commissione europea con decisione di adeguatezza del
+            10 luglio 2023 ai sensi dell&apos;art. 45 GDPR, che garantisce un livello di
+            protezione equivalente a quello europeo. Non sono effettuati ulteriori
+            trasferimenti verso paesi terzi privi di adeguata protezione.
           </p>
         </div>
 
-        {/* 9. Terze parti e social media */}
+        {/* 10. Terze parti e social media */}
         <div style={sectionStyle}>
-          <h2 style={h2Style}>9. Terze parti, social media e WhatsApp</h2>
+          <h2 style={h2Style}>10. Terze parti, social media e WhatsApp</h2>
           <p style={pStyle}>
             Il sito contiene collegamenti a profili e servizi di terze parti. Cliccando su tali
             collegamenti, il dispositivo dell&apos;utente può stabilire una connessione con i server
@@ -289,7 +341,7 @@ export default function PrivacyPage() {
           </p>
           <ul style={{ listStyle: 'none', padding: 0 }}>
             {[
-              'Instagram / Meta Platforms Ireland Ltd. — trattamento dati secondo la Privacy Policy di Meta (https://privacycenter.instagram.com)',
+              'Instagram @red_.artist_ / Meta Platforms Ireland Ltd. — trattamento dati secondo la Privacy Policy di Meta (https://privacycenter.instagram.com)',
               'WhatsApp Ireland Ltd. (Meta) — trattamento dati secondo la Privacy Policy di WhatsApp (https://www.whatsapp.com/legal/privacy-policy)',
             ].map((item, i) => (
               <li key={i} style={liStyle}>
@@ -305,9 +357,9 @@ export default function PrivacyPage() {
           </p>
         </div>
 
-        {/* 10. Responsabile della protezione dei dati (DPO) */}
+        {/* 11. Responsabile della protezione dei dati (DPO) */}
         <div style={sectionStyle}>
-          <h2 style={h2Style}>10. Responsabile della protezione dei dati (DPO)</h2>
+          <h2 style={h2Style}>11. Responsabile della protezione dei dati (DPO)</h2>
           <p style={pStyle}>
             Ai sensi dell&apos;art. 37 del Regolamento (UE) 2016/679, la nomina di un Responsabile
             della Protezione dei Dati (Data Protection Officer) non è obbligatoria per il presente
@@ -319,9 +371,9 @@ export default function PrivacyPage() {
           </p>
         </div>
 
-        {/* 11. Modifiche */}
+        {/* 12. Modifiche */}
         <div style={sectionStyle}>
-          <h2 style={h2Style}>11. Modifiche alla presente informativa</h2>
+          <h2 style={h2Style}>12. Modifiche alla presente informativa</h2>
           <p style={pStyle}>
             Il Titolare si riserva il diritto di apportare modifiche alla presente informativa in
             qualsiasi momento, dandone pubblicità agli utenti su questa pagina. Si prega pertanto

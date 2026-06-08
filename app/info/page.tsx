@@ -265,29 +265,6 @@ export default function InfoPage() {
               <br />
               Campania, Sud Italia
             </div>
-            <div
-              style={{
-                backgroundColor: '#1A1A1A',
-                padding: '24px 32px',
-              }}
-            >
-              <a
-                href="https://maps.google.com/?q=Capaccio+Paestum"
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{
-                  fontFamily: 'var(--font-dm-sans)',
-                  fontSize: '12px',
-                  fontWeight: 600,
-                  letterSpacing: '1.5px',
-                  textTransform: 'uppercase',
-                  color: '#D42B2B',
-                  textDecoration: 'none',
-                }}
-              >
-                Vedi sulla mappa →
-              </a>
-            </div>
           </div>
         </div>
       </div>

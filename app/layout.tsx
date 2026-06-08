@@ -4,6 +4,7 @@ import './globals.css'
 import Navbar from '@/components/layout/Navbar'
 import Footer from '@/components/layout/Footer'
 import WhatsappFab from '@/components/layout/WhatsappFab'
+import InstagramFab from '@/components/layout/InstagramFab'
 import CookieBanner from '@/components/layout/CookieBanner'
 import BackgroundEffects from '@/components/layout/BackgroundEffects'
 
@@ -93,6 +94,7 @@ export default function RootLayout({
         <Navbar />
         <main>{children}</main>
         <Footer />
+        <InstagramFab />
         <WhatsappFab />
       </body>
     </html>
