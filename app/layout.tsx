@@ -1,12 +1,6 @@
 import type { Metadata, Viewport } from 'next'
 import { Bebas_Neue, DM_Sans } from 'next/font/google'
 import './globals.css'
-import Navbar from '@/components/layout/Navbar'
-import Footer from '@/components/layout/Footer'
-import WhatsappFab from '@/components/layout/WhatsappFab'
-import InstagramFab from '@/components/layout/InstagramFab'
-import CookieBanner from '@/components/layout/CookieBanner'
-import BackgroundEffects from '@/components/layout/BackgroundEffects'
 
 const bebas = Bebas_Neue({
   weight: '400',
@@ -88,15 +82,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
         />
       </head>
-      <body>
-        <BackgroundEffects />
-        <CookieBanner />
-        <Navbar />
-        <main>{children}</main>
-        <Footer />
-        <InstagramFab />
-        <WhatsappFab />
-      </body>
+      <body>{children}</body>
     </html>
   )
 }
